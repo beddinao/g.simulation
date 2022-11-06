@@ -1,3 +1,3 @@
 # g.simulation
 
-<h1>Simple Gravity Simulator</h1>
+<h3>Simple Gravity Simulator</h3>
