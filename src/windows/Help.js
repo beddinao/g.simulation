@@ -23,7 +23,7 @@ function Help () {
       <div><p>- time : 292 days for every second, might be less depends on the refresh rate of screens.</p></div>
       <div><p>- This simulation is and has not been made to be 100% accurate , it is just a fun project where you can see what will happen if an exoplanet suddenly enters the solar system .  </p></div>
       <div><p>- The Information given in the info tab are only the ones being applied on this envirement, therefore it requires more calculations to be used as real time data . </p></div>
-      <div><p>- if you like to contribute : <a target='_blank' >https://eddi.github</a> </p> </div>
+      <div><p>- if you like to contribute : <a target='_blank' >https://github.com/ed-dinaoui/g.simulation</a> </p> </div>
     </Window>
   ) : <Side_btn st={btn_sty} txt='?' fn={() => set_vis(true)} />
 }
