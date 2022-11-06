@@ -1,0 +1,25 @@
+#side_btn{
+  height : 5em ;
+  width : 2.5em ;
+  color : var(--txt) ;
+  border : 1px solid var(--border) ;
+  border-radius : 1em ;
+  background : var(--background) ;
+  transition-duration : .3s ;
+  position: absolute ;
+  top : calc( 50% - 2.5em ) ;
+}
+._in {
+  left : calc( 95% - 1.25em ) ;
+}
+.cr_ {
+  left : calc( 5% - 1.25em ) ;
+}
+#side_btn:hover {
+  background : var(--half-border) ;
+  cursor : pointer
+}
+#side_btn > p {
+  height : 100%; 
+  width : 100% ;
+}

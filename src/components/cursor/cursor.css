@@ -1,0 +1,48 @@
+.cursor {
+  position: absolute ;
+  border : 1px solid var(--border) ;
+  border-radius : 50% ;
+  transform : translate(-50% , -50%) ;
+  pointer-events: none ;
+  z-index: 10000;
+}
+
+/* Magic cheatSheet */
+
+.cur_a , .cur_a_mouseup {
+  height : 1.5em ;
+  width : 1.5em ;
+  border-color: var(--full-border);
+  z-index: 10001 ;
+}
+.cur_b , .cur_b_mouseleave , .cur_b_click {
+  height : 4em ;
+  width : 4em ;
+  transition-duration: .1s ;
+}
+.cur_b_mousedown {
+  border-color: var(--t-btn-c);
+  height : 4em ;
+  width : 4em 
+}
+.cur_a_mousedown {
+  height : 4em ;
+  width : 4em ;
+}
+.cur_a_mouseenter {
+  border-color: var(--t-btn-c);
+}
+.cur_a_mouseleave {
+  border-color: var(--full-border);
+}
+.cur_b_mouseup {
+  border-color: var(--border);
+}
+.cur_b_mouseenter , .cur_b_mouseup {
+  height : 7em ;
+  width : 7em ;
+}
+.spec_cur{
+  background : var(--half-border) ;
+  border-color: var(--main-c) ;
+}

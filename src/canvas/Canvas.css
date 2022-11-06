@@ -1,0 +1,10 @@
+#canvas_con{
+  height : 100vh ;
+  width : 100% ;
+  position: absolute ;
+  z-index: -1 ;
+}
+#canvas_con canvas {
+  height : 100% ;
+  width : 100% ;
+}

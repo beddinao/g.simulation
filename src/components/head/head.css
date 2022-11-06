@@ -1,0 +1,56 @@
+#head{
+  position : absolute ;
+  top : 0% ;
+  left : 0% ;
+  z-index: 100 ;
+  height : 10vh ;
+  width : 100% ;
+}
+
+#head svg {
+  width : 100% ;
+  height : 40% ;
+  background : transparent
+}
+#head svg  path {
+  stroke-width: 1.5 ;
+  stroke : var(--border) ;
+  fill : rgba(0,0,0,0)
+}
+#head div:nth-child(1):not(#main_window  div) {
+  height : 70% ;
+  flex-direction: row ;
+  justify-content: space-around ;
+  transition-duration: .3s ;
+  width : 100% ;
+  transform : translateY(20%)
+}
+
+#head > .circle  , #head > p {
+  position : absolute ;
+  z-index: 101 ;
+}
+#head > div > p {
+  color : var(--txt) ;
+  height : 3em ;
+  width : 9em
+}
+#head > p{
+  transform : translateY(-1.8vh) ;
+  letter-spacing : .2em ;
+  color : var(--text) ;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic ;
+  font-size: 12px ;
+  flex-direction: row;
+}
+#head > .circle {
+  height : 12vh ;
+  width : 12vh ;
+  border-radius : 50% ;
+  transform : translateY(-3vh) ;
+  border : 2px solid var(--border)
+}
+#head , #head > .circle{
+  background : var(--background) ;
+}

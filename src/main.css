@@ -1,0 +1,49 @@
+:root {
+  --main-c : #3F98FF ;
+  --background :rgb(0, 0, 0);
+  --bg : #111 ;
+  --text : rgb(174, 174, 174) ;
+  --txt : rgb(91, 98, 113);
+  --border :rgb(12, 13, 15);
+  --full-border :rgb(79, 84, 96);
+  --half-border :rgb(11, 12, 13);
+  --extra-c : rgb(177, 23, 56) ;
+}
+*{
+  padding : 0px ;
+  margin : 0px ;
+  box-sizing : border-box ;
+  cursor : none 
+}
+
+body {
+  height : 100vh ;
+  background : var(--background) ;
+  cursor : none 
+}
+body , main {
+  width : 100% ;
+}
+main , #root {
+  height : 100% ;
+  width : 100%
+}
+main,body , div , button , select , p {
+  display : flex ;
+  flex-direction: column ;
+  align-items : center ;
+  justify-content : center 
+}
+p  {
+  color : var(--text) ;
+  font-family : monospace ;
+  font-size:  10px ;
+  text-transform: uppercase ;
+  letter-spacing: .08em ;
+}
+a , a:hover , a:active{
+  color : var(--main-c) ;
+  text-decoration: none ;
+  cursor: pointer ;
+}
+

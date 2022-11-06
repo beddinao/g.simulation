@@ -1,0 +1,14 @@
+#main_btn {
+  border : 1px solid var(--half-border) ;
+  transition-duration : .3s ;
+  color : var(--txt) ;
+  background : transparent ;
+  font-size: 10px ;
+  font-family: monospace ;
+  text-transform: uppercase ;
+  padding : 1em 3em ;
+  
+}
+#main_btn:hover {
+  background : var(--half-border) ;
+}

@@ -1,0 +1,109 @@
+#in_wr{
+  justify-content: space-around ;
+  align-items: flex-start ;
+  width : 49% ;
+  height : 6em
+}
+#in_wr > p {
+  height : 40% ;
+}
+#in_wr > div , #in_wr > input{
+  width : 95% ;
+  align-self: flex-end ;
+  height : 40% ;
+  justify-content: flex-end ;
+}
+#in_wr > div {
+  flex-direction : row ;
+  column-gap: .2em ;
+}
+#in_wr > div > input{
+  width : 100% ;
+  height : 100% ;
+}
+#in_wr input {
+  background : transparent ;
+  border : 1px solid var(--border) ;
+  outline : none ;
+  color : var(--text) ;
+  padding : 0 1em
+}
+.select {
+  border : 1px solid var(--border) ;
+  width : 100% ;
+  height : 100% ;
+  flex-direction: row ;
+  justify-content: space-around ;
+  color : var(--txt) ;
+  transition-duration: .3s ;
+}
+.select > p:nth-child(2) {
+  transform : rotate(90deg) scaleY(1.5) ;
+  color : inherit ;
+  transition-duration: .3s ;
+}
+#in_wr > div > .drop_down{
+  height : contain ;
+  position : absolute ;
+  align-self: flex-start ;
+  border : 1px solid var(--border) ;
+  min-width: fit-content ;
+  padding : 0 4px ;
+  transition-duration: .3s ;
+  background : var(--background)
+}
+.drop_down > p {
+  min-height : 2.8em ;
+  width : 90% ;
+  transition-duration: .3s ;
+  color : var(--txt) ;
+  align-items: flex-start;
+  padding-left: 1em ;
+}
+.drop_down > p:not(.drop_down > p:last-child){
+  border-bottom : 1px solid var(--border) ;
+}
+#in_wr input{
+  font-size: 10px ;
+  font-family: monospace ;
+}
+.drop_down > p:hover {
+  color : var(--text)
+}
+.select:hover{
+  background : var(--half-border) ;
+  color : var(--main-c)
+}
+.info_ {
+  width : 100% ;
+  height: 80% ;
+  flex-direction: row;
+}
+.info_ p {
+  height : 1.5em
+}
+.info_ > div {
+  width : 50% ;
+  height : 100% ;
+  justify-content: flex-start ;
+  align-items: flex-start ;
+}
+.info_ > div > div {
+  width : 100% ;
+  height : 3.2em ;
+  align-items: flex-start ;
+}
+.info_ > div:nth-child(2) > div {
+  align-items: flex-end ;
+}
+.info_ > div:nth-child(1) > div{
+  width : fit-content ; 
+  align-self: flex-start ;
+}
+.info_ > div:nth-child(1) > div > p {
+  color : var(--txt) ;
+  
+}
+.info_ > div:nth-child(2) > div > p {
+  color : var(--main-c)
+}

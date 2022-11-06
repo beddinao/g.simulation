@@ -1,0 +1,30 @@
+#main_window {
+  width : 25em ;
+  height : 35em ;
+  justify-content: flex-start ;
+  position : absolute ;
+  border : 1px solid var(--border) ;
+  background : var(--background) ;
+  z-index: 10000 ;
+}
+#main_window > div {
+  width : 80% ;
+  flex-direction : row ;
+  justify-content: space-around ;
+}
+#main_window > div:nth-child(1) , #main_window > div:nth-child(3) {
+  max-height : 15% ;
+  min-height : 15% ;
+}
+#main_window > div:nth-child(2) {
+  height : 70% ;
+  flex-wrap: wrap ;
+  align-content: flex-start ;
+  row-gap: 5% ;
+  justify-content: space-between ;
+}
+#main_window > div:nth-child(3) {
+  justify-items : space-around ;
+  justify-content : flex-end ;
+  column-gap : 5%
+}
