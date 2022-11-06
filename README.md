@@ -1,3 +1,3 @@
-# g.simulation
+# *`G.Simulation`*
 
-<h3>Simple Gravity Simulator</h3>
+###  *- Simple Gravity Simulator*
