@@ -12,9 +12,9 @@ function Options (props) {
   return (
     <Window h_txt='options' st={st} btn_s={<div><Button evnt={props.close} c='var(--text)'>close</Button></div>} >
       <In_se_wrapper title='scale' >
-        <Input p_h={` 50 < ${scale} < 1000 `} in_fn={ e => { 
+        <Input p_h={` 20 < ${scale} < 1000 `} in_fn={ e => { 
           let txt = parseFloat(e.currentTarget.value) ;
-          if( txt > 49 && txt < 1001 ) scale = txt ;
+          if( txt > 19 && txt < 1001 ) scale = txt ;
         } } />
       </In_se_wrapper>
       <In_se_wrapper title='trail length' >
