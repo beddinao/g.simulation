@@ -38,13 +38,13 @@ class S_Arrays {
     location.reload()
   }
 
-  set_obj = obj => 
+  set_obj = obj =>
     this._arr.push(new S_Objects(
       ( this.get_obj(obj.name) !== undefined ) ?  obj.name + '_' + parseFloat(obj.x) : obj.name , 
       [ obj.m , obj.radius ] , 
-      [
-        ( obj.ox - window.innerWidth / 2 ) / 300 , 
-        ( obj.oy - window.innerHeight / 2 ) / 300 
+      [ 
+        ( ( obj.x - window.innerWidth / 2 ) / 300 ) + obj.mass_x , 
+        ( ( obj.y - window.innerHeight / 2 ) / 300 ) + obj.mass_y
       ] ,
       [ ( obj.x - obj.ox ) / 35 , ( obj.y - obj.oy ) / 35 ]
     ));
