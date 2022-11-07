@@ -1,6 +1,7 @@
 import React , { useEffect , useState } from 'react' ;
 import './size.css' ;
 import { rec_size } from '../../canvas/Canvas' ;
+import { scale } from '../../windows/Options' ;
 
 
 function Size () {
@@ -15,7 +16,7 @@ function Size () {
     draw() ;
 
     inter = setInterval(() => {
-      set_ob({ x : rec_size[0] / 300 , y : rec_size[1] / 300 })
+      set_ob({ x : rec_size[0] / scale , y : rec_size[1] / scale })
     } , 500)
   }
   var undraw = () => {
