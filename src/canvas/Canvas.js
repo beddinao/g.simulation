@@ -82,8 +82,8 @@ function Canvas () {
       
     if( dragging ) {
       ctx.beginPath() ;
-      ctx.moveTo(ox - ( w_ / 2 ), oy - ( h_ / 2 ) ) ;
-      ctx.lineTo(ix - ( w_ / 2 ), iy - ( h_ / 2 )) ;
+      ctx.moveTo( ( ox - ( w_ / 2 ) ) + mass_i.x * 300 , ( oy - ( h_ / 2 ) ) + mass_i.y * 300 ) ;
+      ctx.lineTo( ( ix - ( w_ / 2 ) ) + mass_i.x * 300 , ( iy - ( h_ / 2 ) ) + mass_i.y * 300 ) ;
       ctx.strokeStyle = '#3F98FF' ;
       ctx.stroke()
     }
