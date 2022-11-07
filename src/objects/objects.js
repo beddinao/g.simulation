@@ -1,5 +1,5 @@
 import { ctx } from '../canvas/Canvas' ;
-import { trail_length } from '../windows/Options' ;
+import { trail_length , scale } from '../windows/Options' ;
 /*
  
   1 astronomical unit  =  1.495979e+8 km  =  9.29558254831e+7 mile  =  300px 
@@ -43,8 +43,8 @@ class S_Arrays {
       ( this.get_obj(obj.name) !== undefined ) ?  obj.name + '_' + parseFloat(obj.x) : obj.name , 
       [ obj.m , obj.radius ] , 
       [ 
-        ( ( obj.x - window.innerWidth / 2 ) / 300 ) + obj.mass_x , 
-        ( ( obj.y - window.innerHeight / 2 ) / 300 ) + obj.mass_y
+        ( ( obj.x - window.innerWidth / 2 ) / scale ) + obj.mass_x , 
+        ( ( obj.y - window.innerHeight / 2 ) / scale ) + obj.mass_y
       ] ,
       [ ( obj.x - obj.ox ) / 35 , ( obj.y - obj.oy ) / 35 ]
     ));
@@ -130,9 +130,9 @@ export class Manifestation {
     return this.positions.length -  n 
   }
   calc_radius = () => {
-    let  r = ( this.radius * 0.1 ) / 100 ;
-    return 20 + ( ( r < 100 ) ? r : ( this.radius * 0.0025 ) / 100 )
-    //return ( r * 200 ) / 1.495979e+8
+    let r = num => { return this.radius * ( scale * num ) } , 
+        to_eq = 0.000015 ;
+    return  ( r(to_eq) < 200 ) ? r(to_eq) :  r( 0.00000015 )
   }
 
   draw(x , y){
