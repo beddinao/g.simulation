@@ -132,7 +132,7 @@ export class Manifestation {
   calc_radius = () => {
     let r = num => { return this.radius * ( scale * num ) } , 
         to_eq = 0.000015 ;
-    return  ( r(to_eq) < 200 ) ? r(to_eq) :  r( 0.00000015 )
+    return  ( r(to_eq) > 250 ) ? r( 0.00000015 ) : ( r(to_eq) > 50 ) ? r( 0.000008 ) : r(to_eq)
   }
 
   draw(x , y){
@@ -222,6 +222,37 @@ var a_ps_s = [
     vx :4.63109579536 ,
     vy : -7.30805790149 ,
     vz : -1.02170262947,
+  } ,
+  {
+    name : 'Jupiter' ,
+    m : 9.4909361047455E-23 ,
+    radius : 71492+-4 ,
+    x : 4.903756709785851E+00 ,
+    y : 6.168858035718945E-01 ,
+    z : -1.122693355848382E-01 ,
+  } ,{
+    name : 'Saturn' ,
+    m : 2.8417000014208E-30 ,
+    radius : 60268+-4 ,
+    x : 7.979782726614224E+00 ,
+    y : -5.755956247828226E+00 ,
+    z : -2.176306710075845E-01 ,
+  } ,
+  {
+    name :  'Uranus' ,
+    m : 4.3406500021703E-29 ,
+    radius : 25559+-4 ,
+    x : 1.352020152627576E+01 ,
+    y : 1.428940666007000E+01 ,
+    z : -1.220853198562557E-01 ,
+  } ,
+  {
+    name : 'Neptune' ,
+    m : 5.1204500025602E-29 ,
+    radius : 24766+-15 ,
+    x : 2.973545720367138E+01 ,
+    y : -3.115504158441270E+00 ,
+    z : -6.211239097132475E-01
   }
 ] ;
 var a_ss_s = [
@@ -238,7 +269,15 @@ var a_ss_s = [
   }
 ] ;
 
-var objects = new S_Arrays('objects' , JSON.parse(JSON.stringify(a_ss_s.concat(a_bs_s , a_ps_s))) ) ;
+var inner_solar_system = [
+  a_ss_s[0] ,
+  a_ps_s[1] ,
+  a_ps_s[0] ,
+  a_bs_s[0] ,
+  a_bs_s[1]
+]
+
+var objects = new S_Arrays('objects' , JSON.parse(JSON.stringify(inner_solar_system)) ) ;
 
 var planets = new S_Arrays('planets' , a_ps_s ) ;
 
