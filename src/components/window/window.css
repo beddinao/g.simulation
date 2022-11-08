@@ -23,6 +23,17 @@
   row-gap: 5% ;
   justify-content: space-between ;
 }
+/* */
+.hel_se_sty{
+  flex-direction: column ;
+  justify-content: space-around ;
+  align-items: flex-start ;
+}
+.hel_se_sty > div{
+  width : 100% ;
+  align-items: flex-start;
+}
+/* */
 #main_window > div:nth-child(3) {
   justify-items : space-around ;
   justify-content : flex-end ;

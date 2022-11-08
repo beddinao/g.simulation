@@ -19,14 +19,14 @@ function Help () {
       <div>
         <Button evnt={() => set_vis(false)} c='var(--main-c)'>close</Button>
       </div>
-    } >
-      <div><p>- units : kg , earth mass and au .</p></div>
+    } se_sty='hel_se_sty' >
+      <div><p>- units : years , solar mass and au .</p></div>
       <div><p>- scale : 1 au = {scale}px .</p></div>
       <div><p>- time : 292 days for every second .</p></div>
-      <div><p>- radius : 0.000015% of small size objects <br/>and 0.00000015% from the bigger ones .</p></div>
+      <div><p>- radius : 0.000015% of small size objects <br/>  and 0.00000015% from the bigger ones .</p></div>
+      <div><p>- symbol meaning :</p><br/><p>  1 au = 149597870.700 km ,</p><br/><p>  x y z  : components of position vectors ,</p><br/><p>  vx vy vz  : components of velocity vectors .</p></div>
       <div><p>- This simulation has't been made to be 100% accurate , just a fun project where you can see what will happen if an exoplanet suddenly enters the solar system .  </p></div>
-      <div><p>- The Information given in the info tab are only the ones being applied on this envirement, therefore it requires more calculations to be used as real time data . </p></div>
-      <div><p>- if you like to contribute : <a target='_blank' >https://github.com/ed-dinaoui/g.simulation</a> </p> </div>
+      <div><p>  if you like to contribute : <a target='_blank' >https://github.com/ed-dinaoui/g.simulation</a> </p> </div>
     </Window>
   ) : <Side_btn st={btn_sty} txt='?' fn={() => set_vis(true)} />
 }
