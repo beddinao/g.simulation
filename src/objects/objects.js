@@ -170,89 +170,81 @@ export class Manifestation {
       - ( x_ - ( w / 2 ) ) ,
       - ( y_ - ( h / 2 ) )
     )
-    //this.ctx.fillStyle = 'transparent' ;
-    //this.ctx.fillRect( ( x_ - ( w / 2 ) ) , ( y_ - ( h / 2 ) ) , w , h ) ;
-
-    //let old_matrix = this.ctx.getTransform() ;
-    //this.ctx.translate(
-    //  old_matrix.e  ,
-    //  old_matrix.f  ,
-    //)
   }
 }
 
 
 // defaults 
-var a_ps = [
+
+var a_bs_s = [
   {
-    name: "Mercury",
-    m: 1.65956463e-7,
-    radius : 2440 ,
-    x: -0.346390408691506,
-    y: -0.272465544507684,
-    z: 0.00951633403684172,
-    vx: 4.25144321778261,
-    vy: -7.61778341043381,
-    vz: -1.01249478093275
-  },
-  {
-    name: "Venus",
-    m: 2.44699613e-6,
-    radius : 6052 ,
-    x: -0.168003526072526,
-    y: 0.698844725464528,
-    z: 0.0192761582256879,
-    vx: -7.2077847105093,
-    vy: -1.76778886124455,
-    vz: 0.391700036358566
-  },
-]
-var a_ss = [
-  {
-    name: "Sun", 
-    m: 1,
-    radius : 695508 ,
-    x: -1.50324727873647e-6,
-    y: -3.93762725944737e-6,
-    z: -4.86567877183925e-8,
-    vx: 3.1669325898331e-5,
-    vy: -6.85489559263319e-6,
-    vz: -7.90076642683254e-7
-  },
-]
-var a_bs = [
-  {
-    name: "Earth",
-    m: 3.0024584e-6,
+    name : 'Earth' ,
+    m : 2.986095001493E-30,
     radius : 6371 ,
-    x: 0.648778995445634,
-    y: 0.747796691108466,
-    z: -3.22953591923124e-5,
-    vx: -4.85085525059392,
-    vy: 4.09601538682312,
-    vz: -0.000258553333317722
+    x : 7.009975722991404E-01 ,
+    y : 6.920815019360272E-01 ,
+    z : 1.681649272837761E-04 ,
+    vx : -4.484879364 ,
+    vy : 4.47255706748 ,
+    vz : -0.000411710293745
   },
   {
-    name: "Mars",
-    m: 3.213e-7 ,
-    radius : 3390 ,
-    x: -0.574871406752105 ,
-    y: -1.395455041953879 ,
-    z: -0.01515164037265145 ,
-    vx: 4.9225288800471425 ,
-    vy: -1.5065904473191791 ,
-    vz: -0.1524041758922603
+    name : 'Mars' ,
+    m : 3.2085500016043E-30,
+    radius : 3389 ,
+    x  :  7.539209714608244E-01 ,
+    y : 1.284648859119576E+00  ,
+    z :  8.402002886049328E-03 ,
+    vx : -4.19988844719  ,
+    vy :3.0432445237 ,
+    vz : 0.166899575805 ,
   }
 ]
+var a_ps_s = [
+  {
+    name : 'Venus' ,
+    m :2.4342500012171E-29,
+    radius : 6051 ,
+    x : -4.412813246675847E-01,
+    y : -5.804023560488093E-01 ,
+    z : 1.716909987421782E-02 ,
+    vx : 5.87578875774  ,
+    vy : -4.44677771127 ,
+    vz : -0.400018733105 ,
+  } ,
+  {
+    name : 'Mercury' ,
+    m :1.6510000008255E-30 ,
+    radius : 2440+-1  ,
+    x : -3.446199632430936E-01 ,
+    y : -2.900796543576517E-01  ,
+    z :7.230294332921780E-03 ,
+    vx :4.63109579536 ,
+    vy : -7.30805790149 ,
+    vz : -1.02170262947,
+  }
+] ;
+var a_ss_s = [
+  {
+    name : 'Sun' ,
+    m : 1 ,
+    radius : 695700 ,
+    x : -9.087550525554187E-03 ,
+    y : 5.920001697036284E-04 ,
+    z : 2.067850930940190E-04 ,
+    vx : 9.05591871191e-05 ,
+    vy :0.00330750603137 ,
+    vz : 2.54868987252e-05 ,
+  }
+] ;
 
+var objects = new S_Arrays('objects' , JSON.parse(JSON.stringify(a_ss_s.concat(a_bs_s , a_ps_s))) ) ;
 
-var objects = new S_Arrays('objects' , JSON.parse(JSON.stringify(a_ss.concat(a_bs , a_ps))) ) ;
+var planets = new S_Arrays('planets' , a_ps_s ) ;
 
-var planets = new S_Arrays('planets' , a_ps ) ;
+var stars = new S_Arrays('stars' , a_ss_s ) ;
 
-var stars = new S_Arrays('stars' , a_ss ) ;
-
-var black_holes = new S_Arrays('black_holes', a_bs ) ;
+var black_holes = new S_Arrays('black_holes', a_bs_s ) ;
 
 //
 

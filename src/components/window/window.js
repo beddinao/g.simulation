@@ -38,7 +38,7 @@ function Window (props) {
   return(
     <div id='main_window' style={props.st} >
       <div onMouseDown={drag_mouse} onMouseUp={fn} onMouseEnter={fn} onMouseLeave={fn} className='var(--text)' ><p id='id' >{props.h_txt}</p></div>
-      <div>{props.children}</div>
+      <div className={props.se_sty} >{props.children}</div>
       {props.btn_s}
     </div>
   )

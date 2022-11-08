@@ -12,25 +12,24 @@ export function Input (props) {
 export function Info_ (props) {
 
   var obj = JSON.parse( JSON.stringify(props.ob) ) ,
-      names_ = ['name' , 'earth mass' , 'radius' , 'position x' , 'pos y' , 'pos z' , 'velocity x' , 'vy' , 'vz', 'acceleration x' , 'ay' , 'az'  ] ;
+      names_ = ['name' , 'solar mass' , 'radius' , 'x' , 'y' , 'z' , 'vx' , 'vy' , 'vz', 'ax' , 'ay' , 'az'  ] ;
 
-  if( props.all ){
-    let ps_ = obj.manifestation.positions ;
-    obj.x = ps_[ ps_.length - 1 ].x  ;
-    obj.y = ps_[ ps_.length - 1 ].y  ;
+  delete obj.manifestation ;
+
+  if( !props.all ){
   
-    delete obj.manifestation  ;
-  } else {
-
     for( let i = 0 , ks = Object.keys(obj) ; i < ks.length ; i++ )
       if( ks[i] !== 'name' && ks[i] !== 'm' && ks[i] !== 'radius' ) delete obj[ks[i]] ;
     ;
 
     names_.splice( 3 , names_.length )
+  
   }
 
-  obj.m /= 3.0024584e-6 ;
   
+  obj.m += ' ' ;
+  obj.radius += ' km' ;
+
   var trans = input => {
     var ob = [] ,
         tofi = str => {
@@ -40,9 +39,9 @@ export function Info_ (props) {
     for( let i = 0 ; i < input.length ; i += 3 ) 
       ob.push ( 
         <div>
-          <p>{ tofi(input[i]) }</p>
-          <p>{ tofi(input[i + 1]) }</p>
-          <p>{ tofi(input[i + 2]) }</p>
+          <p>{ input[i] }</p>
+          <p>{ input[i + 1] }</p>
+          <p>{ input[i + 2] }</p>
         </div>
       )
 
