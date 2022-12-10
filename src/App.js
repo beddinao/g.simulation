@@ -10,7 +10,7 @@ import { Main_info , Main_create } from './windows/Sides' ;
 document.oncontextmenu = () => {
   return false
 } 
-document.title = "  G. Simulation"
+document.title = "G. Simulation"
 
 export default function App() {
   return (
