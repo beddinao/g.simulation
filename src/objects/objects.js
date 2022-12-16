@@ -2,7 +2,7 @@ import { ctx } from '../canvas/Canvas' ;
 import { trail_length , scale } from '../windows/Options' ;
 /*
  
-  1 astronomical unit  =  1.495979e+8 km  =  9.29558254831e+7 mile  =  300px 
+  1 astronomical unit  =  1.495979e+8 km  =  9.29558254831e+7 mile  =  300px( current scale )
 
 */
 var g = 39.5 ,
