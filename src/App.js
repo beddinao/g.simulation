@@ -5,7 +5,7 @@ import Canvas from './canvas/Canvas' ;
 import Cursor from './components/cursor/cursor' ;
 import Help from './windows/Help' ;
 import Size from './components/size/size' ;
-import { Main_info , Main_create } from './windows/Sides' ;
+import {Main_info,Main_create} from './windows/Sides' ;
 
 document.oncontextmenu = () => {
   return false
