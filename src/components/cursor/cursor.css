@@ -18,7 +18,6 @@
 .cur_b , .cur_b_mouseleave , .cur_b_click {
   height : 4em ;
   width : 4em ;
-  transition-duration: .1s ;
 }
 .cur_b_mousedown {
   border-color: var(--t-btn-c);
