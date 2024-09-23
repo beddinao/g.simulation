@@ -16,7 +16,7 @@
   left : calc( 5% - 1.25em ) ;
 }
 #side_btn:hover {
-  background : var(--half-border) ;
+  background : #e6e6e6 ;
   cursor : pointer
 }
 #side_btn > p {
