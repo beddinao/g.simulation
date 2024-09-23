@@ -1,6 +1,6 @@
 :root {
-  --main-c : #3F98FF ;
-  --background :rgb(0, 0, 0);
+  --main-c : #000 ;
+  --background :#fff;
   --bg : #111 ;
   --text : rgb(174, 174, 174) ;
   --txt : rgb(91, 98, 113);
