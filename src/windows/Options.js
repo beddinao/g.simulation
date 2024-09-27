@@ -4,7 +4,7 @@ import Button from '../components/main_btn/main_btn' ;
 import { objects } from '../objects/objects' ;
 import In_se_wrapper , { Input } from '../components/input_select/in_se' ;
 
-let trail_length = 10 , scale = 250 ;
+let trail_length = 10 , scale = 400 ;
 
 function Options (props) {
 
