@@ -58,9 +58,9 @@ class S_Arrays {
   }
   remove_obj = el =>{ 
     this._arr.splice(this._arr.indexOf(this.get_obj(el)) , 1) ;
-    if( this._arr.length == 1 ){
+    /*if( this._arr.length == 1 ){
       location.reload()
-    }
+    }*/
   };
 
   //
